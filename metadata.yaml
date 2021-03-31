@@ -1,0 +1,24 @@
+name: peer-relation-demo
+description: |
+  A simple charm that illustrates how to define, and interact with
+  peer relations. This charm creates a dummy workload, and uses 
+  relation data to exchange information with peers
+
+summary: Demonstration charm to illustrate peer relations
+
+bases:
+  - name: ubuntu
+    channel: 20.04/stable
+
+containers:
+  demo:
+    resource: demo-image
+
+peers:
+  replicas:
+    interface: charm-replica
+
+resources:
+  demo-image:
+    type: oci-image
+    description: Docker image for demo

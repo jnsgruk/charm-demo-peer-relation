@@ -1,0 +1,9 @@
+/venv
+*.py[cod]
+*.charm
+
+tests/
+.flake8
+.gitignore
+requirements-dev.txt
+run_tests
